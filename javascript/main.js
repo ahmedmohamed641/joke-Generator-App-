@@ -4,7 +4,6 @@ const btn = document.getElementById("btn")
 const jokeText = document.getElementById("joke-text")
 const loaderContainer = document.querySelector('.loader-container');
 
-
 window.addEventListener("load", () => {
     loaderContainer.style.display = 'none';
 });
