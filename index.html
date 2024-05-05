@@ -1,35 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script type="module" src="js/loader/loader.js"></script>
-    <script type="module" src="js/fetch/fetch.js"></script>
-    <script type="module" src="js/main.js"></script>
-    <link rel="stylesheet" href="css/main.css">
-    <title>joke app</title>
-  </head>
+ <head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="js/loader/loader.js"></script>
+  <script type="module" src="js/fetch/fetch.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <link rel="stylesheet" href="css/main.css" />
+  <title>joke app</title>
+ </head>
 
-  <body class=" font-mono sans-serif h-dvh bg-pink-600  text-center text-white flex justify-center items-center">
+ <body
+  class="font-mono sans-serif h-dvh bg-pink-600 text-center text-white flex justify-center items-center">
+  <main
+   class="relative backdrop-blur-md bg-white/30 relative h-5/6 w-6/12 bg-blue-700 flex-col justify-center p-3 rounded-2xl shadow-lg shadow-blue-600/50">
+   <h1>Joke Generator</h1>
+   <div class="loader-container">
+    <div class="spinner"></div>
+   </div>
 
-    <main class=" relative backdrop-blur-md bg-white/30 relative h-5/6 w-6/12 bg-blue-700  flex-col  justify-center p-3 rounded-2xl shadow-lg shadow-blue-600/50">
-      
-      <div class="loader-container">
-        <div class="spinner"></div>
-      </div>
+   <section
+    class="absolute w-11/12 bg-blue-700 h-5/6 blur-3xl opacity-80 p-3 rounded-3xl"></section>
 
-      <section class=" absolute w-11/12 bg-blue-700 h-5/6  blur-3xl  opacity-80 p-3 rounded-3xl"></section> 
-      
-      <p id="joke-text" class=" relative inset-y-1/4">Click down to generate Joke</p>
+   <p id="joke-text" class="relative inset-y-1/4 h-24">
+    Click down to generate Joke
+   </p>
 
-      <button id="btn" class=" relative inset-y-3/4 p-2 w-6/12 bg-emerald-400 rounded-lg border-none hover:bg-emerald-500 ">
-        Generate Joke
-      </button>
-
-    </main>
-
-  </body>
-
+   <button
+    id="btn"
+    class="relative inset-y-3/4 p-2 w-6/12 bg-emerald-400 rounded-lg border-none hover:bg-emerald-500">
+    Generate Joke
+   </button>
+  </main>
+ </body>
 </html>

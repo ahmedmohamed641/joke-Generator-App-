@@ -1,26 +1,26 @@
-import { hideLoading,displayLoading } from "../loader/loader";
+import { hideLoading, displayLoading } from '../loader/loader';
 
-const jokeText = document.getElementById("joke-text")
-
+/**
+ * fetch api
+ * @param {string} url
+ * @returns {object} data
+ */
 async function fetchApi(url) {
-    let response;
-    let data = null
-    displayLoading();
+ let response;
 
-   try {
-    response = await fetch(url);
-    if (!response.ok) {
-        throw new Error("Network response was not OK");
-    }
+ displayLoading();
 
-    } catch (error) {
-        console.error("There has been a problem with your fetch operation:", error);
-
-    } finally{
-        hideLoading();
-        data = await response?.json();
-        return jokeText.textContent = data.value
-    }
+ try {
+  response = await fetch(url);
+  if (!response.ok) {
+   throw new Error('Network response was not OK');
+  }
+ } catch (error) {
+  console.error('There has been a problem with your fetch operation:', error);
+ } finally {
+  hideLoading();
+  return await response?.json();
+ }
 }
 
 export default fetchApi;

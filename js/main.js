@@ -1,14 +1,16 @@
-import fetchApi from "./fetch/fetch";
+import fetchApi from './fetch/fetch';
 
-const btn = document.getElementById("btn")
+const btn = document.getElementById('btn');
 const loaderContainer = document.querySelector('.loader-container');
+const jokeText = document.getElementById('joke-text');
 
-window.addEventListener("load", () => {
-    loaderContainer.style.display = 'none';
-});
+loaderContainer.style.display = 'none';
 
-btn.addEventListener("click", jokeGenerator);
+const jokeGenerator = async () => {
+ const joke = await fetchApi('https://api.chucknorris.io/jokes/random');
+ if (joke) {
+  jokeText.textContent = joke.value;
+ }
+};
 
-function jokeGenerator() {
-    fetchApi("https://api.chucknorris.io/jokes/random")
-}
+btn.addEventListener('click', jokeGenerator);
