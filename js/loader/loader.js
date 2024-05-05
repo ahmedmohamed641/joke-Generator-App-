@@ -8,7 +8,6 @@ const hideLoading = () => {
     loaderContainer.style.display = 'none';
 };
 
-export {displayLoading};
-export {hideLoading}
+export {displayLoading, hideLoading}
 
 

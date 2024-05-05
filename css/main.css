@@ -12,7 +12,8 @@
     border-radius: 50%;
     animation: spin-anim 0.3s linear infinite;
     position: fixed;
-    top: 15%;
+    top: 5%;
+    left: 45%;
 }
 
 @keyframes spin-anim {
@@ -30,7 +31,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
     position: fixed;
-    top: 30%;
+    top: 10%;
     z-index: 1;
 }

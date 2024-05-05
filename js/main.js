@@ -1,4 +1,4 @@
-import { displayLoading, hideLoading } from "./loader";
+import { displayLoading, hideLoading } from "./loader/loader";
 
 const btn = document.getElementById("btn")
 const jokeText = document.getElementById("joke-text")

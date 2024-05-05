@@ -5,19 +5,21 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script defer type="module" src="javascript/main.js"></script>
-    <script defer type="module" src="javascript/loader.js"></script>
+    <script type="module" src="js/loader/loader.js"></script>
+    <script type="module" src="js/main.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <title>joke app</title>
   </head>
 
   <body class=" font-mono sans-serif h-dvh bg-pink-600  text-center text-white flex justify-center items-center">
     
-    <div class="loader-container">
-      <div class="spinner"></div>
-    </div>
+    
 
     <main class=" relative backdrop-blur-md bg-white/30 relative h-5/6 w-6/12 bg-blue-700  flex-col  justify-center p-3 rounded-2xl shadow-lg shadow-blue-600/50">
+      
+      <div class="loader-container">
+        <div class="spinner"></div>
+      </div>
 
       <section class=" absolute w-11/12 bg-blue-700 h-5/6  blur-3xl  opacity-80 p-3 rounded-3xl"></section> 
       
